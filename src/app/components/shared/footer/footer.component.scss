@@ -1,0 +1,20 @@
+.footer-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+  // background-color: red;
+
+  .footer-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 36px;
+    width: 960px;
+    border-top: 1px solid #eaecef;
+    font-size: 12px;
+
+    .me {
+      margin-right: 16px;
+      text-decoration: none;
+    }
+  }
+}
