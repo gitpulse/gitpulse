@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  domainName: 'gitpulse.net',
+  apiEndpoint: 'https://api.github.com'
 };
