@@ -1,0 +1,31 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+
+  .login-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 120px;
+
+    .title {
+      text-align: center;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 70px;
+    }
+    
+    .logo-wrapper {
+      align-self: center;
+      margin-top: 28px;
+      width: 200px;
+      height: 200px;
+
+      .logo {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}
