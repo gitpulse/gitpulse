@@ -9,12 +9,15 @@ import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { LoginComponent } from './components/login/login.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { OauthService } from './shared/services/oauth.service';
+import { HomeComponent } from './components/home/home.component';
+import { Globals } from './shared/globals';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,7 @@ import { OauthService } from './shared/services/oauth.service';
     HttpClientModule,
   ],
   providers: [
+    Globals,
     OauthService
   ],
   bootstrap: [AppComponent]
