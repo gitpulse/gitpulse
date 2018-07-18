@@ -13,7 +13,7 @@ export class BaseService {
   });
 
   constructor(
-    protected http: HttpClient
+    protected http: HttpClient,
   ) { }
 
   getRequest(url: string, params = {}): Observable<any> {
