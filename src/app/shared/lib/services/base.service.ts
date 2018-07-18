@@ -27,6 +27,7 @@ export class BaseService {
 
   postRequest(url: string, body: object = null): Observable<any> {
     const requestBody = body;
+    console.log(requestBody);
     return this.http.post(url, requestBody, { headers: this.headers }).pipe(
       catchError((error: HttpErrorResponse) =>  {
         console.log(error);

@@ -25,7 +25,7 @@ import { Globals } from './shared/globals';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [
     Globals,

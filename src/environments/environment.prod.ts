@@ -3,5 +3,5 @@ export const environment = {
   domainName: 'gitpulse.net',
   apiEndpoint: 'https://api.github.com',
   githubClientId: 'ad277de13708451b031c',
-  githubClientSecret: 'baee95eb43d9e710498bb9dd3955f9c71fc59228'
+  gateKeeperEndpoint: 'http://localhost:9999/authenticate/'
 };

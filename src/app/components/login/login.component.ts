@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { OauthService } from '../../shared/services/oauth.service';
-import { Globals } from '../../shared/globals';
 
 @Component({
   selector: 'app-login',
@@ -12,14 +11,13 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private globals: Globals,
+    private router: Router,
     private oauth: OauthService
   ) { }
 
   ngOnInit() {
     const code: string = this.route.snapshot.queryParams['code'];
     if (code) {
-      this.globals.code = code;
       this.requestForToken(code);
     }
   }
@@ -29,7 +27,10 @@ export class LoginComponent implements OnInit {
   }
 
   requestForToken(code: string) {
-    console.log('code: ' + code);
-    this.oauth.requestForToken(code).subscribe();
+    this.oauth.requestForToken(code).subscribe((res) => {
+      sessionStorage.setItem('access_token', res.token);
+      console.log(res.token);
+      this.router.navigate(['/home']);
+    });
   }
 }
